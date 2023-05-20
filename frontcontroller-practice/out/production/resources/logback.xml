@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration>
+<configuration>
+    <!-- 이 곳에 추가할 기능을 넣는다. -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <layout>
+            <Pattern>
+                %d{HH:mm:ss.SSS} [%-5level][%thread] [%logger{36}] - %m%n
+            </Pattern>
+        </layout>
+    </appender>
+
+    <logger name="org.example"/>
+
+    <root level="INFO">
+        <appender-ref ref="STDOUT"/>
+    </root>
+</configuration>
